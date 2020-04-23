@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}projects gallery{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for project in projects %}
+        <div class="card text-center col-md-4">
+            <img class="card-img-top" src="{{project.screen_shot.url}}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="{{ project.url }}" target="_blank" class="btn btn-primary">visit site</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
