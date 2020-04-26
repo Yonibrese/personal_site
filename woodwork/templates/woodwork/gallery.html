@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Wood work gallery{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for work in works %}
+        <div class="card text-center col-md-4">
+            <img class="card-img-top" src="{{work.image.url}}">
+            <div class="card-body">
+                <p class="cart-text">{{ work.description }}</p>
+                <a href="#" class="btn btn-primary">better view</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
