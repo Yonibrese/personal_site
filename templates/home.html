@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}yonibrese{% endblock %}
 
 {% block content %}
-<h1>home page test</h1>
+<div id="landing">
+    <div class="jumbotron jumbotron-fluid" id='jumbo'>
+        <div class="container">
+            <div class="row">
+                <div id="jumbo-img-box">
+                    <img src="{% static 'profile_pic.jpg' %}" class="rounded-circle" height="150px" width="150px">
+                </div>
+                <div>
+                    <h1 class="display-4">Full Stack Developer</h1>
+                    <p class="lead">about area</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
