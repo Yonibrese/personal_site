@@ -1,0 +1,30 @@
+#jumbo{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+#jumbo_img{
+    border-right: 2px solid black;
+    padding-right: 100px;
+    align-self: center;
+    height: 100%;
+}
+#jumbo_text{
+	border: 2px solid red;
+}
+
+#jumbo_text p{
+	text-align: center;
+	display: block;
+}
+
+#attr{
+	justify-content: space-around;
+}
+
+#attr ul{
+	list-style: none;
+}
