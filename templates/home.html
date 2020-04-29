@@ -6,15 +6,43 @@
 {% block content %}
 <div id="landing">
     <div class="jumbotron jumbotron-fluid" id='jumbo'>
-        <div class="container">
-            <div class="row">
-                <div id="jumbo-img-box">
-                    <img src="{% static 'profile_pic.jpg' %}" class="rounded-circle" height="150px" width="150px">
-                </div>
+        <div class="row">
+            <div id="jumbo_img">
+                <img src="{% static 'profile_pic.jpg' %}" class="rounded-circle" height="150px" width="150px">
+            </div>
+            <div id="jumbo_text">
+                <h1 class="display-4">Full Stack Developer</h1>
+                <hr>
                 <div>
-                    <h1 class="display-4">Full Stack Developer</h1>
-                    <p class="lead">about area</p>
+                    <p class="lead">about</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="attr">
+            <div id='languages'>
+                <h4>Programming languages</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Java Script</li>
+                    <li>Html</li>
+                    <li>Css</li>
+                </ul>
+            </div>
+            <div id='framworks'>
+                <h4>web framworks</h4>
+                <ul>
+                    <li>Django</li>
+                    <li>Flask</li>
+                </ul>
+            </div>
+            <div id="data">
+                <h4>database</h4>
+                <ul>
+                    <li>Postgresql</li>
+                    <li>MongoDB</li>
+                </ul>
             </div>
         </div>
     </div>
