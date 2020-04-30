@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     height: 50vh;
-    border: 2px solid black;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 #jumbo_img{
@@ -12,17 +12,18 @@
     align-self: center;
     height: 100%;
 }
-#jumbo_text{
-	border: 2px solid red;
-}
 
-#jumbo_text p{
+#jumbo_text{
 	text-align: center;
 	display: block;
+}
+#jumbo_text a{
+	margin-top: 100px;
 }
 
 #attr{
 	justify-content: space-around;
+	text-align: center;
 }
 
 #attr ul{
