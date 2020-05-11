@@ -6,6 +6,9 @@ class Comment(models.Model):
     date_added = models.DateField(auto_now=True)
     comment_text = models.TextField(null=True)
 
+    class Meta:
+        ordering = ['date_added']
+
     def __str__(self):
         return f'{self.author, self.date_added}'
 

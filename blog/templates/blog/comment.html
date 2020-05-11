@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Post a comment{% endblock %}
+
+{% block content %}
+<diV class="container" id="full_post">
+    <h2>{{ post.title }}</h2>
+    <hr>
+    <h5>{{ post.date_added }}</h5>
+    <p>
+        {{ post.blog_text }}
+    </p>
+    <div class="container" id="comments">
+        {% for comment in post.comment.all %}
+        <div>
+            <h4>{{ comment.author }}</h4>
+            <p> {{ comment.comment_text }} </p>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+
+            {{form.as_p}}
+            <input type="submit" value="comment">
+        </form>
+    </div>
+</diV>
+{% endblock %}
