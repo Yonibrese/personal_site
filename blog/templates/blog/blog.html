@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}bolg{% endblock %}
+{% block title %}blog{% endblock %}
 
 {% block content %}
     <div>
@@ -11,6 +11,14 @@
             <h5> {{ post.date_added }} </h5>
             <hr>
             <p>{{ post.blog_text }}</p>
+            <a href="#" class="btn btn-primary">comment on this post</a>
+            <hr>
+            {% for comment in post.comment.all %}
+                <div id="comment" class="container">
+                    <h6>{{ comment.author }}</h6>
+                    <p>{{ comment.comment_text }}</p>
+                </div>
+            {% endfor %}
         </div>
         {% endfor %}
     </div>
