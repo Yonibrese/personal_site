@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}bolg{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Personal blog</h1>
+        {% for post in posts %}
+        <div id="post" class="container">
+            <h2>{{ post.title }}</h2>
+            <h5> {{ post.date_added }} </h5>
+            <hr>
+            <p>{{ post.blog_text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
