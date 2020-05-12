@@ -3,28 +3,35 @@
 {% block title %}Post a comment{% endblock %}
 
 {% block content %}
-<diV class="container" id="full_post">
+
+<div class="container" id="full_post">
     <h2>{{ post.title }}</h2>
     <hr>
     <h5>{{ post.date_added }}</h5>
     <p>
         {{ post.blog_text }}
     </p>
-    <div class="container" id="comments">
+    <div class="container" id="comment_container">
+        <hr>
+        <h4>Comments:</h4>
         {% for comment in post.comment.all %}
-        <div>
-            <h4>{{ comment.author }}</h4>
+        <div id="comment_box">
+            <div id="comment_title" class="row">
+                <h4>By: {{ comment.author }}</h4>
+                <p> posted on: {{ comment.date_added }}</p>
+            </div>
             <p> {{ comment.comment_text }} </p>
         </div>
         {% endfor %}
     </div>
-    <div>
+    <div id="comment_form">
         <form method="post">
             {% csrf_token %}
 
             {{form.as_p}}
-            <input type="submit" value="comment">
+            <input type="submit" value="comment" class="btn btn-primary">
+            <a href="{% url 'blog' %}" class="btn btn-secondary">go back</a>
         </form>
     </div>
-</diV>
+</div>
 {% endblock %}

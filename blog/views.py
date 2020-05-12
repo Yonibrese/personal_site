@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import models, forms
 
 
@@ -13,6 +13,7 @@ def comment(request, id):
         form = forms.CommentForm(request.POST)
         if form.is_valid():
             post.comment.add(form.save())
+            return redirect('comment', id)
     else:
         form = forms.CommentForm()
     return render(request, 'blog/comment.html', {'post': post, 'form': form})

@@ -1,3 +1,5 @@
+/*home page stuff*/
+
 #jumbo{
     display: flex;
     flex-direction: row;
@@ -33,4 +35,19 @@
 
 #contact ul{
 	list-style: none;
+}
+
+/*blog page styling*/
+
+#post{
+    border: solid black 1px;
+    margin-bottom: 20px;
+}
+
+#comment_form{
+    border: solid grey 1px;
+}
+
+#comment_title{
+    justify-content: space-between;
 }
