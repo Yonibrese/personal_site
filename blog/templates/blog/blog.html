@@ -2,17 +2,25 @@
 
 {% block title %}blog{% endblock %}
 
+
 {% block content %}
-    <div>
+    <div id="blog_page">
         <h1>Personal blog</h1>
+        {% if not posts  %}
+        <div class="container" id="blog_notice">
+            <p>This is where I will post any personal thoughts or ideas.</p>
+            <p>Any thing written here is my opinion and not to be taken as fact with out checking my sources</p>
+        </div>
+        {% else %}
         {% for post in posts %}
         <div id="post" class="container">
             <h2>{{ post.title }}</h2>
-            <h5> {{ post.date_added }} </h5>
+            <h5> Posted on: {{ post.date_added }} </h5>
             <hr>
-            <p>{{ post.blog_text|truncatechars:255 }}</p>
+            <p>{{ post.blog_text|truncatechars:250 }}</p>
             <a href="{% url 'comment' id=post.id %}" class="btn btn-primary">view the post and comment</a>
         </div>
         {% endfor %}
+        {% endif %}
     </div>
 {% endblock %}
