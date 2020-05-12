@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         {% for project in projects %}
-        <div class="card text-center col-md-4">
+        <div class="card text-center col-md-4 shadow-lg" id="code_card">
             <img class="card-img-top" src="{{project.screen_shot.url}}">
             <div class="card-body">
                 <h5 class="card-title">{{ project.name }}</h5>

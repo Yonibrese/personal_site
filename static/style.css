@@ -1,3 +1,17 @@
+/* Main body */
+
+body{
+    background-color:#5A5E68;
+}
+
+#nav a {
+    color:black;
+}
+
+#about{
+    color:white;
+}
+
 /*home page stuff*/
 
 #jumbo{
@@ -27,6 +41,7 @@
 	justify-content: space-around;
 	text-align: center;
 	padding-top: 15%;
+    color: white;
 }
 
 #attr ul{
@@ -39,15 +54,41 @@
 
 /*blog page styling*/
 
+#blog_page h1{
+    color: white;
+}
+
 #post{
     border: solid black 1px;
     margin-bottom: 20px;
+    color: white;
+}
+
+#blog_notice{
+    color: white;
+}
+
+#full_post{
+    color: white;
 }
 
 #comment_form{
-    border: solid grey 1px;
+    border: solid black 1px;
 }
 
 #comment_title{
     justify-content: space-between;
+}
+
+/* wood work styling*/
+
+#wood_card{
+    margin:10px;
+}
+
+
+/*code projects styling*/
+
+#code_card{
+    margin:10px;
 }
