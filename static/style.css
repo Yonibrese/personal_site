@@ -47,9 +47,18 @@ body{
 #attr ul{
 	list-style: none;
 }
+/*contact page*/
+
+#contact{
+    color: white;
+}
 
 #contact ul{
 	list-style: none;
+}
+
+#contact a{
+    color: white;
 }
 
 /*blog page styling*/
