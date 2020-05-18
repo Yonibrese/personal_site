@@ -1,4 +1,10 @@
 # env file
 .env
 # database
+<<<<<<< HEAD
+.db.sqlite3
+
+
+=======
 db.sqlite3
+>>>>>>> 4a71cf8c35b73c2bd420c5293951a95ee88fc045
