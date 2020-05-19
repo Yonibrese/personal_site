@@ -91,13 +91,16 @@ body{
 
 /* wood work styling*/
 
+
 #wood_card{
-    margin:10px;
+    justify-content: space-between;
+    /*padding: 5px;*/
 }
 
 
 /*code projects styling*/
 
 #code_card{
-    margin:10px;
+    justify-content: space-between;
+    padding: 5px;
 }
