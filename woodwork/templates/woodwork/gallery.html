@@ -4,9 +4,9 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row" id="wood_gallery">
         {% for work in works %}
-        <div class="card text-center col-md-3 shadow-lg" id="wood_card">
+        <div class="card text-center col-md-4 shadow-lg" id="wood_card">
             <img class="card-img-top" src="{{work.image.url}}">
             <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted">{{ work.type }}</h6>
